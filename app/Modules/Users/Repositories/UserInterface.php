@@ -18,9 +18,4 @@ interface UserInterface{
     public function updateUser(int $id,array $data);
 
     public function deleteUser(int $id,array $data);
-
-
-
-
-
 }
