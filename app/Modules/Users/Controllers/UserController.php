@@ -2,13 +2,15 @@
 namespace App\Modules\Users\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Modules\Users\Repositories\UserInterface;
+use App\Modules\Users\Repositories\UserRepositoryInterface;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function index(UserInterface $userInterface){
+
+    public function index(UserRepositoryInterface $userInterface){
         $user = $userInterface->getAllUsers();
-        return view('users::index',compact('user'));
+        return view('user::index',compact('user'));
     }
 
     public function create(){

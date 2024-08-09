@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Modules\Users;
+
+namespace App\Modules\Users\Services;
 use App\Models\User;
-use App\Modules\Users\Repositories\UserInterface;
+use App\Modules\Users\Repositories\UserRepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
-class UserService implements UserInterface{
+class UserRepository implements UserRepositoryInterface{
 
  public function getUserById(int $id):?Model{
     return User::find($id);

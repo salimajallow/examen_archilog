@@ -2,7 +2,9 @@
 namespace App\Modules\Users\Repositories;
 use Illuminate\Database\Eloquent\Model;
 use App\Modules\Users;
-interface UserInterface{
+interface UserRepositoryInterface{
+
+    
     public function getUserById(int $id):?Model;
 
     public function getAllUsers():array;
