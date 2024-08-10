@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Modules\Users;
 interface UserRepositoryInterface{
 
-    
+
     public function getUserById(int $id):?Model;
 
     public function getAllUsers():array;
